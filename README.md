@@ -1,25 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Authentication Template with Navbar
+
+This project is a template for a Next.js application that includes authentication features included in a navbar. Users can register and log in using credentials or third-party providers such as Google, GitHub, Apple, Facebook, etc. The template utilizes a NoSQL database (MongoDB) and is built using Prisma.
 
 ## Getting Started
 
-First, run the development server:
+To get started with this template, follow the steps below:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### Clone the Repository
+
+```
+git clone https://github.com/SergioPujol/nextjs-auth-navbar.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate to the project directory and install the required packages:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+cd nextjs-auth-navbar
+npm install
+```
 
-## Technologies
+### Set Up Environment Variables
 
-[Next.js](https://nextjs.org/)
-[Prisma](https://www.prisma.io/)
-[NextAuth](https://next-auth.js.org/)
+Create a `.env` file in the project root directory and configure the following environment variables.
+
+```
+MONGODB_URL=
+NEXTAUTH_SECRET=
+```
+
+And the providers needed:
+
+```
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+FACEBOOK_CLIENT_ID=
+FACEBOOK_CLIENT_SECRET=
+
+APPLE_ID=
+APPLE_SECRET=
+```
+
+
+### Set Up Prisma
+
+Apply the database schema and migrations using the following command:
+
+```
+npx prisma db push
+```
+
+### Start the Application
+
+Start the Next.js development server with the following command:
+
+```
+npm run dev
+```
+
+The application will be accessible at `http://localhost:3000` in your web browser.
